@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    
+    width: 100vw;
+    height: 100vh; 
+}
+
+.first {
+    background-image: url(Assets/imgHunterXHunter.jpg);
+}
+
+.second {
+    background-image: url(Assets/imgKimetsuNoYaba.jpg);
+}
+
+.third {
+    background-image: url(Assets/imgFullMetal.jpg);
+}
+
+.fourth {
+    background-image: url(Assets/imgOnePiece.jpg);
+}
+
+.itemMenu {
+    flex-grow: 1;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    list-style: none;
+    transition: all .7s ease-in-out;
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.itemMenu:hover {
+    flex-grow: 10;
+    
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.itemMenu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    text-decoration: none;
+}
+
+.text {
+    font-size: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:  #fff;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+.itemMenu:hover .text {
+    font-size: 2em;
+    text-shadow: 2px 2px 12px #000;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+}
